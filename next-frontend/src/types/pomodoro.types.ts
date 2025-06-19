@@ -10,6 +10,6 @@ export interface IPomodoroSessionResponse extends IBase {
 	rounds?: IPomodoroRoundResponse[];
 }
 
-export type typePomodoroRoundState = Partial<Omit<IPomodoroRoundResponse, "id" | "createdAt" | "updatedAt">>;
+export type TypePomodoroRoundState = Partial<Omit<IPomodoroRoundResponse, "id" | "createdAt" | "updatedAt">>;
 
-export type typePomodoroSessionState = Partial<Omit<IPomodoroSessionResponse, "id" | "createdAt" | "updatedAt">>;
+export type TypePomodoroSessionState = Partial<Omit<IPomodoroSessionResponse, "id" | "createdAt" | "updatedAt">>;
