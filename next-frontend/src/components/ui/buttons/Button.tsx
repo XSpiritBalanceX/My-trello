@@ -10,6 +10,7 @@ export function Button({ children, className, ...rest }: PropsWithChildren<TypeB
 				"linear rounded-lg bg-transparent vorder border-primary py-2 px-7 text-base fonct-medium text-white transition hover:bg-primary active:bg-brand-700",
 				className,
 			)}
+			{...rest}
 		>
 			{children}
 		</button>
