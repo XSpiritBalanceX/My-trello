@@ -27,7 +27,7 @@ export function Auth() {
 			push(DASHBOARD_PAGES.HOME);
 		},
 		onError(err: any) {
-			toast.error(err?.response?.data?.message);
+			toast.error(err?.response?.data?.message || "Oops...An error occurred");
 		},
 	});
 
@@ -45,7 +45,7 @@ export function Auth() {
 	return (
 		<div className="flex min-h-screen">
 			<form
-				className="w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout"
+				className="w-1/3 m-auto shadow bg-gray-800/50  rounded-xl p-10 "
 				onSubmit={handleSubmit(onSubmit)}
 			>
 				<Heading title="Auth" />

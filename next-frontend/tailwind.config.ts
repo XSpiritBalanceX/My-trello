@@ -32,7 +32,7 @@ const config: Config = {
 				"8xl": "7.1rem",
 				"9xl": "9.5rem",
 			},
-			transitionSuration: {
+			transitionDuration: {
 				DEFAULT: "266ms",
 			},
 			width: {
