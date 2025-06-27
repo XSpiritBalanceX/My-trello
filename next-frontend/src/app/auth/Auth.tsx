@@ -45,7 +45,7 @@ export function Auth() {
 	return (
 		<div className="flex min-h-screen">
 			<form
-				className="w-1/3 m-auto shadow bg-gray-800/50  rounded-xl p-10 "
+				className="w-1/3 m-auto shadow bg-gray-500/20 rounded-xl p-10 "
 				onSubmit={handleSubmit(onSubmit)}
 			>
 				<Heading title="Auth" />
