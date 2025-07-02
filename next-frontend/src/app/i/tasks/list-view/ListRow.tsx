@@ -12,7 +12,7 @@ import { TransparentField } from "@/components/ui/fields/TransparentField";
 
 interface IListRowProps {
 	item: ITaskResponse;
-	setItems: Dispatch<SetStateAction<ITaskResponse[]>>;
+	setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>;
 }
 
 export function ListRow({ item, setItems }: IListRowProps) {
