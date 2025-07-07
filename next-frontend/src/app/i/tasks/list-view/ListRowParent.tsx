@@ -37,7 +37,7 @@ export function ListRowParent({ value, label, items, setItems }: IListRowParentP
 									ref={provided.innerRef}
 									{...provided.draggableProps}
 									{...provided.dragHandleProps}
-									className="z-[4] relative"
+									className="relative"
 								>
 									<ListRow
 										key={el.id}
