@@ -9,7 +9,7 @@ import { SingleSelect } from "@/components/ui/task-edit/SingleSelect";
 import { useDeleteTask } from "../hooks/useDeleteTask";
 import { TransparentField } from "@/components/ui/fields/TransparentField";
 import { Checkbox } from "@/components/ui/checkbox/index";
-import "./LastView.scss";
+import "./ListView.scss";
 
 interface IListRowProps {
 	item: ITaskResponse;

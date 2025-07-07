@@ -5,7 +5,7 @@ import { FILTERS } from "../columns.data";
 import { filterTasks } from "../filter-tasks";
 import { ListAddRowInput } from "./ListAddRowInput";
 import { ListRow } from "./ListRow";
-import "./LastView.scss";
+import "./ListView.scss";
 
 interface IListRowParentProps {
 	value: string;

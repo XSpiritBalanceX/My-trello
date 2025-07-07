@@ -4,7 +4,7 @@ import { COLUMNS } from "../columns.data";
 import { useTaskDnd } from "../hooks/useTaskDnd";
 import { useTasks } from "../hooks/useTasks";
 import { ListRowParent } from "./ListRowParent";
-import "./LastView.scss";
+import "./ListView.scss";
 
 export function ListView() {
 	const { items, setItems } = useTasks();

@@ -1,6 +1,6 @@
 import type { ITaskResponse } from "@/types/task.types";
 import type { Dispatch, SetStateAction } from "react";
-import "./LastView.scss";
+import "./ListView.scss";
 
 interface IListAddRowInputProps {
 	setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>;
