@@ -12,13 +12,13 @@ export function SwitcherView({ type, setType }: ISwitcherViewProps) {
 	return (
 		<div className="flex items-center gap-4 mb-5">
 			<button
-				className={cn("flex items-center gap-1", { "opacity-40": type === "kanban" })}
+				className={cn("flex items-center gap-1 hover:cursor-pointer", { "opacity-40": type === "kanban" })}
 				onClick={() => setType("list")}
 			>
 				<ListTodo /> List
 			</button>
 			<button
-				className={cn("flex items-center gap-1", { "opacity-40": type === "list" })}
+				className={cn("flex items-center gap-1 hover:cursor-pointer", { "opacity-40": type === "list" })}
 				onClick={() => setType("kanban")}
 			>
 				<Kanban /> Board
