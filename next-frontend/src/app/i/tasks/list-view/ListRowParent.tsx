@@ -5,7 +5,7 @@ import { FILTERS } from "../columns.data";
 import { filterTasks } from "../filter-tasks";
 import { ListAddRowInput } from "./ListAddRowInput";
 import { ListRow } from "./ListRow";
-import styles from "./ListView.module.scss";
+import "./LastView.scss";
 
 interface IListRowParentProps {
 	value: string;
@@ -22,7 +22,7 @@ export function ListRowParent({ value, label, items, setItems }: IListRowParentP
 					ref={provided.innerRef}
 					{...provided.droppableProps}
 				>
-					<div className={styles.colHeading}>
+					<div className={"colHeading"}>
 						<div className="w-full">{label}</div>
 					</div>
 

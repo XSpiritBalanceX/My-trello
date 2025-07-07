@@ -1,6 +1,6 @@
 import type { ITaskResponse } from "@/types/task.types";
 import type { Dispatch, SetStateAction } from "react";
-import styles from "./ListView.module.scss";
+import "./LastView.scss";
 
 interface IListAddRowInputProps {
 	setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>;
@@ -17,7 +17,7 @@ export function ListAddRowInput({ setItems, filterDate }: IListAddRowInputProps)
 	};
 
 	return (
-		<div className={styles.addRow}>
+		<div className={"addRow"}>
 			<button
 				className="italic opacity-40 text-sm"
 				onClick={addRow}

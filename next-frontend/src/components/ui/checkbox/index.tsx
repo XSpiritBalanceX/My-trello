@@ -1,4 +1,4 @@
-const Checkbox = (props: {
+export const Checkbox = (props: {
 	id?: string;
 	extra?: string;
 	color?:

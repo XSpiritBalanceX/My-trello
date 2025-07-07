@@ -7,8 +7,9 @@ import { GripVertical, Loader, Trash } from "lucide-react";
 import { DatePicker } from "@/components/ui/task-edit/date-picker/DatePicker";
 import { SingleSelect } from "@/components/ui/task-edit/SingleSelect";
 import { useDeleteTask } from "../hooks/useDeleteTask";
-import styles from "./ListView.module.scss";
 import { TransparentField } from "@/components/ui/fields/TransparentField";
+import { Checkbox } from "@/components/ui/checkbox/index";
+import "./LastView.scss";
 
 interface IListRowProps {
 	item: ITaskResponse;
@@ -30,11 +31,11 @@ export function ListRow({ item, setItems }: IListRowProps) {
 	const { deleteTask, isDeletePending } = useDeleteTask();
 
 	return (
-		<div className={cn(styles.row, watch("isCompleted") ? styles.completed : "", "animation-opacity")}>
+		<div className={cn("row", watch("isCompleted") ? "completed" : "", "animation-opacity")}>
 			<div>
 				<span className="inline-flex items-center gap-2.5 w-full">
 					<button aria-describedby="todo-item">
-						<GripVertical className={styles.grip} />
+						<GripVertical className={"grip"} />
 					</button>
 					<Controller
 						control={control}
