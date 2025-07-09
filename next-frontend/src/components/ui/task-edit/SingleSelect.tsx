@@ -55,7 +55,7 @@ export function SingleSelect({ data, onChange, value, isColorSelect }: ISingleSe
 			)}
 			{isShow && (
 				<div
-					className="absolute w-full p-2.5 left-0 slide bg-black/40 z-10 shadow rounded-lg"
+					className="absolute w-full p-2.5 left-0 slide bg-black border border-white/40 z-10 shadow rounded-lg"
 					style={{ top: "calc(100% + .5rem)" }}
 				>
 					{data.map((el) => (
