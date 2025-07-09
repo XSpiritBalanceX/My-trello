@@ -1,18 +1,16 @@
 import { Heading } from "@/components/ui/Heading";
 import { NO_INDEX_PAGE } from "@/constants/seo.constants";
 import type { Metadata } from "next";
-import { Pomodoro } from "./Pomodoro";
 
 export const metadata: Metadata = {
-	title: "Pomodoro timer",
+	title: "Time blocking",
 	...NO_INDEX_PAGE,
 };
 
-export default function PomodoroPage() {
+export default function TimeBlockingPage() {
 	return (
 		<div>
-			<Heading title="Pomodoro timer" />
-			<Pomodoro />
+			<Heading title="Time blocking" />
 		</div>
 	);
 }
