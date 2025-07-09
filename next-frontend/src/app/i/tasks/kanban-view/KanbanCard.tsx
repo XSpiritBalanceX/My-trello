@@ -33,7 +33,10 @@ export function KanbanCard({ item, setItems }: IKanbanCardProps) {
 	return (
 		<div className={cn("card", watch("isCompleted") ? "completed" : "", "animation-opacity")}>
 			<div className="cardHeader">
-				<button aria-describedby="todo-item">
+				<button
+					aria-describedby="todo-item"
+					className="kanbanGripButton"
+				>
 					<GripVertical className="grip" />
 				</button>
 				<Controller
