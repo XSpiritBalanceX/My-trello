@@ -1,15 +1,12 @@
 import { pomodoroService } from "@/services/pomodoro.service";
-import { IPomodoroRoundResponse } from "@/types/pomodoro.types";
 import { useQuery } from "@tanstack/react-query";
-import { Dispatch, SetStateAction, use, useEffect } from "react";
+import { useEffect } from "react";
+import { useLoadSettings } from "./useLoadSettings";
+import type { ITimerState } from "../timer.types";
 
-interface IUseTodaySession {
-	setActiveRound: Dispatch<SetStateAction<IPomodoroRoundResponse | undefined>>;
-	setSecondsLeft: Dispatch<SetStateAction<number>>;
-	workInterval: number;
-}
+export function useTodaySession({ setActiveRound, setSecondsLeft }: ITimerState) {
+	const { workInterval } = useLoadSettings();
 
-export function useTodaySession({ setActiveRound, setSecondsLeft, workInterval }: IUseTodaySession) {
 	const {
 		data: sessionResponse,
 		isLoading,
@@ -28,10 +25,10 @@ export function useTodaySession({ setActiveRound, setSecondsLeft, workInterval }
 			setActiveRound(activeRound);
 
 			if (activeRound && activeRound?.totalSeconds !== 0) {
-				setSecondsLeft(workInterval - activeRound.totalSeconds);
+				setSecondsLeft(activeRound.totalSeconds);
 			}
 		}
 	}, [isSuccess, rounds]);
 
-	return { sessionResponse, isLoading, refetch, isSuccess };
+	return { sessionResponse, isLoading, workInterval };
 }

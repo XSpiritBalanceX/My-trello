@@ -36,5 +36,5 @@ export function useTimer(): ITimerState {
 		setSecondsLeft((isBreakTime ? workInterval : breakInterval) * 60);
 	}, [secondsLeft, isBreakTime, workInterval, breakInterval]);
 
-	return { activeRound, secondsLeft, setActiveRound, setIsRunning, setSecondsLeft };
+	return { activeRound, secondsLeft, isRunning, setActiveRound, setIsRunning, setSecondsLeft };
 }
