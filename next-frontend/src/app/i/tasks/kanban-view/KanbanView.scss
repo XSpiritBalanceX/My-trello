@@ -1,0 +1,75 @@
+.board {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 2rem;
+	width: 100%;
+	overflow-x: auto;
+
+	.column {
+		width: 17rem;
+		white-space: nowrap;
+		min-height: 79vh;
+
+		.card {
+			border-radius: 0.25rem;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			margin-top: 1.25rem;
+			padding: 1rem;
+			position: relative;
+			background-color: #0e0f0f;
+
+			&.completed {
+				font-style: italic;
+				text-decoration: line-through;
+				opacity: 0.5;
+			}
+
+			.cardHeader {
+				display: flex;
+				align-items: center;
+				margin-bottom: 0.5rem;
+				font-size: 93%;
+
+				> input:last-child {
+					margin-left: 0.5rem;
+				}
+			}
+
+			.cardBody {
+				> div {
+					margin-bottom: 0.625rem;
+					width: max-content;
+					min-width: 6rem;
+
+					> button:last-child {
+						opacity: 0.15;
+					}
+				}
+			}
+
+			.cardActions {
+				position: absolute;
+				bottom: 0.25rem;
+				right: 0.375rem;
+				opacity: 0.4;
+			}
+		}
+	}
+}
+
+.kanbanGripButton {
+	.grip {
+		opacity: 0.2;
+		transition: opacity 0.2s;
+		margin-left: -0.25rem;
+		margin-right: -0.125rem;
+		position: absolute;
+		top: 0.5rem;
+		right: 0.375rem;
+
+		&:hover,
+		&:active {
+			opacity: 1;
+		}
+	}
+}

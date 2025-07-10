@@ -1,0 +1,33 @@
+.list {
+	.block {
+		border-radius: 0.25rem;
+		margin-bottom: 0.75rem;
+		padding: 1rem;
+		font-size: 0.875rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&:active,
+		&:hover {
+			.grip {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.timeBlockGripButton {
+	.grip {
+		opacity: 0.25;
+		transition: opacity 0.3s;
+		margin-left: -0.25rem;
+		margin-right: 0.125rem;
+
+		&:hover,
+		&:active {
+			opacity: 1;
+		}
+	}
+}
